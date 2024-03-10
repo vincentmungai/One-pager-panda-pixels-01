@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vin'sTemplate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="test-style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, sans-serif;
+            font-weight: 300;
+            font-size: 0.8em;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 5vh;
+        }
+        
+        .div1,
+        .div2 {
+            padding: 1em;
+        }
+        
+        .page-1-body {
+            padding-left: 5em;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .page-2-body {
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-1-body {
+            background-color: coral;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .page-1-body {
+                background-color: #758795;
+            }
+        }
+        
+        .page-2-body {
+            background-color: #758795;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .page-2-body {
+                background-color: coral;
+            }
+        }
+        
+        .btn {
+            font-size: 0.7em;
+            padding-left: 3em;
+            padding-right: 3em;
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            border-width: 0;
+            background-color: black;
+            color: white;
+            margin-right: 3%;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
+        }
+        
+        #scrollToTopBtn,
+        #scrollToPrevBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        #scrollToTopBtn {
+            right: 20px;
+            background-color: #007bff;
+        }
+        
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+        
+        #scrollToPrevBtn {
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+        }
+        
+        #scrollToPrevBtn:hover {
+            background-color: #218838;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 30vh;
+            background-color: #758795;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image {
+            display: flex;
+        }
+        
+        .desktop-text {
+            font-size: 1.7em;
+        }
+        
+        .mobile-text {
+            font-size: 1.5em;
+            display: none;
+        }
+        
+        .mobile-hero {
+            background-color: black;
+            height: 10em;
+        }
+        
+        .hero-image {
+            /* Add styles for the hero image */
+        }
+        
+        .btn:hover {
+            background-color: #e5edef;
+            color: black;
+            transition: 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Scroll to Top button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <button id="scrollToPrevBtn" onclick="scrollToPrev()">Previous</button>
+
+    <section>
+        <div class="container">
+            <div class="div1" style="background-color: antiquewhite; text-align: right;">Home</div>
+            <div class="div2" style="background-color: burlywood; text-align: center;">About</div>
+            <div class="div2" style="background-color: bisque; text-align: left;">Contact</div>
+        </div>
+
+        <div class="page-1-body">
+            <!-- Text for desktop view -->
+            <span class="desktop-text">
+                <br>  
+                Hi,
+                Welcome to an Artistic Exploration of Moments in Time. <br>
+                Immerse yourself in a world where each frame tells a story, where emotions unfold in a symphony of colors and light. <br>
+                Uncover the beauty of life through my lens – where every click is a brushstroke in the canvas of memories. <br>
+                <button class="btn" style="margin-top: 2em;">Book Now</button> <br>
+            </span>
+
+            <!-- Text for mobile view -->
+            <span class="mobile-text">
+                <div class="mobile-hero""></div>
+                <p>
+                   Bye,
+                    Welcome to an Artistic Exploration of Moments in Time. Immerse yourself in a world where each frame tells a story, where emotions unfold in a symphony of colors and light. Uncover the beauty of life through my lens – where every click is a brushstroke in the canvas of memories.
+                </p>
+                <button class="btn">Book Now</button>
+            </span>
+        </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section>
+        <div class="container">
+            <!-- Repeat the container content for each section as needed -->
+        </div>
+
+        <div class="page-2-body">
+            <!-- Text for desktop view -->
+            <span class="desktop-text">
+                <p>
+                    
+                </p>
+                Welcome to an Artistic Exploration of Moments in Time. <br>
+                Immerse yourself in a world where each frame tells a story, where emotions unfold in a symphony of colors and light. <br>
+                Uncover the beauty of life through my lens – where every click is a brushstroke in the canvas of memories <br>
+                <button class="btn" style="margin-top: 2em;">Book Now</button>
+            </span>
+
+            <!-- Text for mobile view -->
+            <span class="mobile-text">

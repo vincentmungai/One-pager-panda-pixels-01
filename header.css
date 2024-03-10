@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    word-wrap: break-word;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: #121417;
+    overflow-x: hidden !important;
+    background: #fff;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.75em;
+    color: #121417;
+    margin-bottom: 1.1111em;
+    /* 20px / 18px = 1.1111em */
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 15%;
+    /* This value might need adjustment depending on your design */
+}
+
+h4 {
+    font-size: 200%;
+}
+
+h1,
+h2,
+h4 {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    line-height: 1.25em;
+    margin: 0 0 0 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #f4f4f4;
+}
+
+.container {
+    padding: 0.0667em 6%;
+    /* 1.2rem / 18px = 0.0667em */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* ... (Other styles remain unchanged) ... */
+
+.header {
+    background-image: url(images/header4.jpg);
+    min-height: 80vh;
+    background-color: #111;
+    background-position: left;
+    object-fit: contain;
+    background-size: cover;
+}
+
+.header {
+    background-color: #f6f7f8;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15em;
+}
+
+body {
+    background-color: #f6f7f8;
+}
+
+.header .box {
+    width: 100%;
+    /*max-width: 75%;
+    min-width: 50%;*/
+}
+
+.header .box h1 {
+    color: #121417;
+}
+
+.header {
+    padding: 0.25rem 1rem;
+    /*border: 1px solid#121417;*/
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+    color: #121417;
+}
+
+
+/* ======= Footer style ======= */
+
+.footer {
+    background-color: #121417;
+    /*background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll*/
+}
+
+.panda-icon {
+    width: 6%;
+    object-position: top;
+    object-fit: contain;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.container {
+    align-items: center;
+}
+
+.form form {
+    display: flex;
+    padding: 0rem 0rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    color: #121417;
+}
+
+.form form input {
+    width: 200px;
+    padding: 0px 10px;
+    height: 40px;
+    border: none;
+    background-color: #121417;
+}
+
+.form button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #121417;
+    font-size: 12px;
+    color: #121417;
+}
+
+
+/* second footer */
+
+.second-footer {
+    font-weight: 600;
+    background-image: url(images/Conceptbg1.png);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+}
+
+.second-footer .box {
+    max-width: 450px;
+}
+
+.second-footer .title {
+    padding: 0;
+    margin-bottom: 10px;
+    color: #121417;
+    padding: 15px 0px;
+}
+
+.title {
+    font-size: 150%;
+}
+
+.section-title {
+    font-size: 150%;
+}
+
+.second-footer .text p {
+    font-family: caveat;
+    font-size: 120%;
+    line-height: 19px;
+    color: #121417;
+    padding: 15px 0px;
+}
+
+.second-footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.second-footer ul li {
+    padding: 1px 0px;
+}
+
+.second-footer ul li a,
+.second-footer ul li span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #262626;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.footer .box ul li a:hover {
+    color: #121417;
+}
+
+.copyright {
+    background-color: #000000c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.51rem 6%;
+}
+
+.copyright p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.navbar2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #738594;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-links2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item2 {
+    margin-right: 20px;
+}
+
+.nav-link2 {
+    color: black;
+    /* Change the color to black */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link2.active {
+    color: black;
+    /* Change the color for the active link */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a78c9e;
+}

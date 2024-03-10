@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Pixels Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flickity@2.2.1/dist/flickity.min.css">
+    <!-- Include Slick CSS and JS from CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Solves the reload issue -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!--<div id="cursor"></div> -->
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // JavaScript function to scroll to the top
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+        // Show/hide the button based on scroll position
+        window.onscroll = function() {
+            showScrollToTopButton();
+        };
+
+        function showScrollToTopButton() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+    </script>
+    <div class="navbar2">
+        <ul class="navbar-links2">
+            <li class="nav-item2"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item2"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item2"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item2"><a class="nav-link" href="#works">Gallery</a></li>
+        </ul>
+    </div>
+    <!--
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <div>
+                    <a class="logo" href="home.html">
+                        <strong>Pp &nbsp</strong>
+
+                    </a>
+                </div>
+
+            </div>
+
+            <ul class="navbar-links">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#works">Gallery</a></li>
+            </ul>
+
+
+
+
+        </div>
+    </nav>
+ -->
+
+    <div class="header">
+        <div class="container">
+            <div class="box">
+                <h4 class="" style="font-family: caveat,sans-serif; color: #a78c9e;">
+                    <div class="typing-demo">
+                        Hello there !
+                    </div>
+
+
+                    <div>
+
+                    </div>
+                </h4>
+                <h1>
+
+                    I'm Alex Onkoba <br>
+                </h1>
+
+
+
+                <span style=" font-family: caveat; color: #a78c9e; font-size: 2em;">From</span> <br>
+                <img src="images/icons/PNGs/logo 4.png" alt="" style="width: 25vh;">
+                <div class="hero-description">
+                    <p style="font-family: 'Roboto', sans-serif;">
+                        Welcome to an Artistic Exploration of Moments in Time. Immerse yourself in a world where each frame tells a story, where emotions unfold in a symphony of colors and light. Uncover the beauty of life through my lens – where every click is a brushstroke
+                        in the canvas of memories
+
+                    </p>
+
+                </div>
+                <div style="padding-top: 0.2em;">
+                    <button class="btn1" onclick="window.location.href='#works';">See Our work</button>
+                    <button class="btn2" onclick="window.location.href='#contact';">Contact Us</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Works Gallery -->
+    <section class="gallery bg-dark" id="works" style="background-color: black;">
+        <div class="heading">
+            <h2 class="title" style="padding-top: 2em;">Our Work</h2>
+        </div>
+        <div class="container" style="padding-bottom: 1em;">
+            <ul>
+                <li onclick="filterImages('all')">All</li>
+                <li onclick="filterImages('portrait')">Portrait </li>
+                <li onclick="filterImages('wedding')">Wedding</li>
+                <li onclick="filterImages('landscape')">Landscape</li>
+                <li onclick="filterImages('B&W')">B&W</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="column" id="gallery">
+                <img src="images/1.jpg" data-category="wedding">
+                < </div>
+
+                    <div class="column" id="gallery">
+                        <img src="images/8.jpg" data-category="portrait">
+
+
+                    </div>
+
+                    <div class="column" id="gallery">
+                        <img src="images/6.jpg" data-category="landscape">
+
+
+                    </div>
+
+                    <div class="column" id="gallery">
+
+                        <img src="images/6.jpg" data-category="B&W">
+
+                    </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Carousel for revealed images -->
+        <div id="imageCarousel" style="margin-top: 2em;">
+            <div><img src="images/1.jpg" alt="Image 1"></div>
+            <div><img src="images/2.jpg" alt="Image 2"></div>
+            <div><img src="images/3.jpg" alt="Image 3"></div>
+            <div><img src="images/4.jpg" alt="Image 4"></div>
+            <div><img src="images/5.jpg" alt="Image 5"></div>
+            <div><img src="images/6.jpg" alt="Image 6"></div>
+            <div><img src="images/7.jpg" alt="Image 7"></div>
+            <div><img src="images/8.jpg" alt="Image 8"></div>
+        </div>
+
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Include Slick JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize Slick carousel
+                $('#imageCarousel').slick({
+                    autoplay: true,
+                    autoplaySpeed: 2000, // Set the slideshow interval in milliseconds (e.g., 2000 = 2 seconds)
+                    dots: true,
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 3, // Adjust the number of images to display at once
+                    slidesToScroll: 1
+                });
+            });
+        </script>
+    </section>
+    <!--  Works Gallery -->
+
+
+
+    <!-- About section -->
+    <section class="about bg-light" id="about">
+        <div class="container">
+
+            <div class="box">
+                <h2 class="title">
+                    Meet the Visionary Crafting Timeless Stories.
+                </h2>
+                <p>
+                    I paint in bursts of colour, Our lens a brush dipped in sunshine and spice.
+
+                </p>
+
+                <div id="expanded-text">
+                    <p>
+                        <!-- Your expanded text goes here -->
+                        Hey there! I’m Alex Onkoba, the face behind the camera and your go-to storyteller. I fell head over heels for photography during [mention a personal story or moment], and it’s been a thrilling ride ever since. My mission? To capture the magic in everyday
+                        moments and turn them into visual stories that make your heart smile. From sunny smiles to moody landscapes, I’m all about freezing those feelings that words can’t quite express. Specializing in [mention specific interests or styles],
+                        I’m on a mission to make your memories timeless. So, let’s embark on this visual journey together. Get comfy, and let’s create some beautiful stories! Cheers to laughter, love, and a lifetime of unforgettable moments!
+                    </p>
+                </div>
+
+                <div id="read-more-btn" style="text-decoration: none; color: #06c;
+                border-bottom: 1px solid #a78c9e;
+                width: 6em;
+                ">Read More &#x3009;</div>
+
+
+                <ul>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <span> Thousands of Modern Photography shots taken</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <span>Proven track record of tackling diverse projects</span>
+
+                    </li>
+
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <span>Comprehensive understanding of Our customer's needs</span>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <span>Exceptional work quality</span>
+                    </li>
+                </ul>
+
+                <div class="about-bottom">
+                    <img src="./images/signature.svg" alt="" class="signature">
+                    <div class="about-name-wrapper">
+                        <div class="about-name-dark">Alex Onkoba</div>
+                        <div class="about-rol">Founder of Panda Pixels Photography</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-img">
+                <div class="img">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- About section -->
+
+
+    <!-- Services section -->
+    <section class="services bg-dark" id="services">
+        <div class="heading">
+            <h2 class="section-title"><span style="color: black;  ">Our Services</span></h2>
+            <p class="section-title2">Your vision, our lens. Let's tell a story worth remembering.</p>
+        </div>
+        <div class="container">
+
+            <div class="box border-01">
+                <div class="item">
+                    <img src="./images/icons/icon-1.svg" alt="">
+                    <a href="services-page.html">
+                        <h6>Photography</h6>
+                        <p>Capturing your highlights.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="box border-02">
+                <div class="item">
+                    <img src="./images/icons/icon-2.svg" alt="">
+                    <a href="services-page.html">
+                        <h6>Videography</h6>
+                        <p>Relive those moments.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box border-03">
+                <div class="item">
+                    <img src="./images/icons/icon-3.svg" alt="">
+
+                    <a href="services-page.html">
+                        <h6>Photo Retouching</h6>
+                        <p>Every detail, redefined.</p>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="box border-04">
+                <div class="item">
+                    <img src="./images/icons/icon-4.svg" alt="">
+                    <a href="services-page.html">
+                        <h6>Aerial Photography</h6>
+                        <p>Beyond the horizon, a story unfolds.</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            <div class="box border-05">
+                <div class="item">
+                    <img src="./images/icons/icon-5.svg" alt="">
+                    <a href="services-page.html">
+                        <h6>Lighting Setup</h6>
+                        <p>Where pixels meet pixie dust.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="box border-06">
+                <div class="item">
+                    <img src="./images/icons/icon-6.svg" alt="">
+                    <a href="services-page.html">
+                        <h6>Video Color Grading</h6>
+                        <p>From raw footage to cinematic masterpiece.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services section -->
+
+
+
+
+
+    <!-- Contact section -->
+    <section class="contact bg-light" id="contact">
+        <div class="container">
+
+            <div class="box">
+                <h2 class="title">
+                    Need help with professional photography? <span style="font-family: caveat, jost,sans-serif; color: #a78c9e; font-size: 2em;"><strong>Let's work together!</strong></span>
+                </h2>
+                <ul>
+                    <li>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>+254 700 000 000</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-at" aria-hidden="true"></i>
+                        <span>pandapixels@gmail.com</span>
+
+                    </li>
+                    <li style="margin-bottom: 5%;">
+                        <i class="fa fa-location-pin" aria-hidden="true"></i>
+                        <span>Nairobi, Kenya 00100</span>
+                    </li>
+                </ul>
+
+            </div>
+            <p></p>
+            <div class="box">
+                <div class="box-r">
+                    <div class="form-box">
+                        <div class="form-title">
+                            <h2>Get in touch!</h2>
+                        </div>
+                        <form target="_blank" action="https://formsubmit.co/vinimunga@gmail.com" method="POST">
+                            <div class="one-line">
+                                <div class="box-input">
+                                    <i class="far fa-user"></i>
+                                    <input type="text" name="Fullnames" id="" class="text" placeholder="Full Name.." required>
+                                </div>
+                                <div class="box-input">
+                                    <i class="fa fa-phone"></i>
+                                    <input type="text" name="phone" id="" class="text" placeholder="your phone" required>
+                                </div>
+                            </div>
+
+                            <div class="box-input">
+                                <i class="fa fa-at"></i>
+                                <input type="email" name="email" id="" class="text" placeholder="email..">
+                            </div>
+                            <div class="box-input" style="color: white;">
+
+                                From <input type="date" name="First-Date-of-Event"> To <input type="date" name="Last-Date-of-Event">
+                            </div>
+
+                            <!--<div class="box-input">
+                                <i class="fa fa-clock"></i>
+                                <span style="color:#F6F7F8; font-size: 80%;">How long would you like to book us for?</span>
+                                <select>
+                                    <option>6hrs</option>
+                                    <option>8hrs</option>
+                                    <option>10hrs</option>
+                                    <option>Full Day</option>
+                                    <option>More than a Day</option>
+
+                                </select>
+                            </div>
+                        -->
+
+
+
+                            <div class="box-input">
+                                <label class="address"><i class="fa fa-location-pin"></i></label>
+                                <textarea name="Event-Address" id="" cols="30" rows="5" placeholder="  Describe the Event's Location"></textarea>
+                            </div>
+                            <button class="btn-send">Submit</button>
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact section -->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="second-footer">
+            <div class="container">
+                <div class="box">
+                    <div class="logo-wrapper">
+                        <a class="logo" href="index.html"> <img src="images/icons/PNGs/logo 4.png" alt="" style="width: 50%;"> </a>
+                    </div>
+                    <div class="text">
+                        Tiny details bursting with life.
+                    </div> <br>
+                </div>
+                <div class="box">
+                    <h3 class="title">Quick Links</h3>
+                    <ul>
+
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Works</a></li>
+
+                        <li><a href="#"><i class="fab fa-instagram"><span style="font-family: jost,sans-serif; font-size: 90%;"> <strong>Instagram</strong></span></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"><span style="font-family: jost,sans-serif; font-size: 90%;"> <strong>Twitter</strong></span></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"><span style="font-family: jost,sans-serif; font-size: 90%;"> <strong>Facebook</strong></span></i></a></li>
+
+
+
+
+
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">Contact</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>
+                               <strong>+254 700 000 000</strong> 
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa fa-at"></i>
+                            <span>
+                               <strong>pandapixels@gmail.com</strong> 
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa fa-location-pin" aria-hidden="true"></i>
+                            <span>
+                               <strong>Nairobi, Kenya. 00100</strong> 
+                            </span>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class=" copyright">
+            <div class="box">
+                <p class="btm-text">Copyright © 2023 by <a href="https://github.com/vincentmungai">Vincent Mungai</a>. All rights reserved :)</p>
+            </div>
+
+        </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Add this JavaScript code to scroll to the top on page reload
+        window.onload = function() {
+            // Scroll to the top of the page
+            window.scrollTo(0, 0);
+        };
+
+        // JavaScript to handle filtering
+        function filterImages(category) {
+            var images = document.querySelectorAll('#gallery img');
+
+            images.forEach(function(image) {
+                if (category === 'all' || image.dataset.category === category) {
+                    image.classList.add('visible');
+                } else {
+                    image.classList.remove('visible');
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var cursor = document.getElementById("cursor");
+
+            document.addEventListener("mousemove", function(e) {
+                var x = e.clientX - cursor.offsetWidth / 2;
+                var y = e.clientY + window.scrollY - cursor.offsetHeight / 2 - 210;
+
+                cursor.style.transform = "translate(" + x + "px, " + y + "px)";
+            });
+        });
+
+        var expandedText = document.getElementById("expanded-text");
+        var readMoreBtn = document.getElementById("read-more-btn");
+
+        readMoreBtn.addEventListener("click", function() {
+            expandedText.style.display = "block";
+            expandedText.style.opacity = "1"; // Set opacity to 1 to make it visible
+            readMoreBtn.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+<!--
+
+wildlife
+Travel
+Outdoor
+
+
+-->
